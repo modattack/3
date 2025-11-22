@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOD ATTACK 3 – Offizielle Projektseite</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #eaeaea;
+    }
+    header {
+      background: rgba(20, 20, 20, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      text-align: center;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 18px;
+      background: rgba(15, 15, 15, 0.4);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+    }
+    nav a {
+      color: #2ecc71;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: rgba(46, 204, 113, 0.08);
+      box-shadow: 0 0 6px rgba(46, 204, 113, 0.3) inset;
+      transition: 0.25s;
+    }
+    nav a:hover {
+      color: #3dff92;
+      background: rgba(46, 204, 113, 0.15);
+      box-shadow: 0 0 12px #2ecc71, 0 0 20px #2ecc71 inset;
+      text-shadow: 0 0 8px #2ecc71;
+    }
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      background: url('hero-placeholder.jpg') center/cover no-repeat;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+    }
+    .hero h1,
+    .hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 12px #2ecc71;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    section {
+      padding: 45px 20px;
+      max-width: 950px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      margin-top: 40px;
+      box-shadow: 0 0 15px rgba(0, 255, 170, 0.05), 0 0 40px rgba(0, 255, 170, 0.05) inset;
+    }
+    h2 {
+      color: #2ecc71;
+      text-shadow: 0 0 6px #2ecc71;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      background: rgba(20,20,20,0.3);
+      backdrop-filter: blur(10px);
+      margin-top: 50px;
+      box-shadow: 0 0 10px rgba(0, 255, 170, 0.05);
+    }
+  .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(0,255,170,0.12), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(0,150,255,0.12), transparent 60%);
+      animation: floatParticles 12s infinite ease-in-out alternate;
+      z-index: 0;
+    }
+    @keyframes floatParticles {
+      0% { transform: translateY(-15px); opacity: 0.8; }
+      100% { transform: translateY(15px); opacity: 1; }
+    }
+    section {
+      padding: 45px 20px;
+      max-width: 950px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      margin-top: 40px;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.15), 0 0 60px rgba(0, 255, 170, 0.1) inset;
+    }
+    nav a {
+      position: relative;
+      overflow: hidden;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(0,255,170,0.4), transparent);
+      transition: 0.4s;
+    }
+    nav a:hover::after {
+      left: 100%;
+    }
+  .participant-name { font-size: 1rem; margin: 3px 0; }
+.participant-name.owner { color: #ff4d4d; text-shadow: 0 0 6px #ff4d4d; }
+.participant-name.normal { color: #ffffff; opacity: 0.9; }
+.participant-avatar { width: 55px; height: 55px; border-radius: 6px; margin-right: 12px; }
+.participant-card { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+@media (max-width: 700px) {
+  nav { flex-wrap: wrap; gap: 12px; padding: 12px; }
+  nav a { padding: 6px 12px; font-size: 0.9rem; }
+  header img { max-width: 240px; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  section { padding: 30px 15px; }
+  .participant-card { gap: 10px; }
+  .participant-avatar { width: 45px; height: 45px; }
+  .participant-name { font-size: 0.9rem; }
+}
+
+@media (max-width: 450px) {
+  nav { flex-direction: column; gap: 10px; }
+  nav a { width: 100%; text-align: center; }
+  header img { max-width: 200px; }
+  .hero { padding: 70px 15px; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 0.9rem; }
+  section { margin-top: 25px; }
+}
+.hidden{opacity:0;transform:translateY(30px);transition:0.8s;}
+.show{opacity:1;transform:translateY(0);}
+a{position:relative;overflow:hidden;}
+.ripple{position:absolute;width:80px;height:80px;background:rgba(0,255,170,0.4);border-radius:50%;transform:translate(-50%,-50%) scale(0);animation:rippleAnim .6s linear;}@keyframes rippleAnim{to{transform:translate(-50%,-50%) scale(4);opacity:0;}}
+</style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/YB7B3Wkm/minecraft-title-4.png" alt="MOD ATTACK 3 Logo" style="max-width: 320px; display: block; margin: 0 auto 10px auto; filter: drop-shadow(0 0 12px #2ecc71);" />
+  </header>
+
+  <nav>
+    <a href="#about">Projekt</a>
+    <a href="#participants">Teilnehmer</a>
+    <a href="#mods">Mods</a>
+    <a href="#rules">Regeln</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <div class="hero">
+    <h1>MOD ATTACK 3</h1>
+    <p><span id="countdown"></span></p>
+  </div>
+
+  <section id="about">
+    <h2>Über das Projekt</h2>
+    <p>
+      MOD ATTACK 3 ist ein modded Minecraft-Event für ausgewählte YouTuber. Inspiriert von beliebten Formaten wie Minecraft Freunde bietet dieses Projekt eine Kombination aus Technik, Abenteuern und Server-Events.
+    </p>
+  </section>
+
+  <section id="participants">
+    <h2>Teilnehmer</h2>
+
+    <div class="participant-card">
+      <img src="https://i.ibb.co/DPqJvSpb/avatar-Head2-3.png" alt="Knatter654 Avatar" class="participant-avatar" />
+      <div>
+        <h3 class="participant-name owner">Knatter654 </h3>
+      </div>
+    </div>
+
+    <div class="participant-card">
+      <img src="https://i.ibb.co/yB4LJWVZ/avatar-Head2-2.png" alt="Hyper_leon654 Avatar" class="participant-avatar" />
+      <div>
+        <h3 class="participant-name owner">Hyper_leon654 </h3>
+      </div>
+    </div>
+
+    <div class="participant-card">
+      <img src="https://i.ibb.co/mVc8crDf/avatar-Head2-5.png" alt="LuraxxYT Avatar" class="participant-avatar" />
+      <div>
+        <h3 class="participant-name normal">LuraxxYT </h3>
+      </div>
+    </div>
+
+    <div class="participant-card">
+      <img src="https://i.ibb.co/WN2LYqjk/avatar-Head2-4.png" alt="AwesomeLeonski Avatar" class="participant-avatar" />
+      <div>
+        <h3 class="participant-name normal">AwesomeLeonski </h3>
+      </div>
+    </div>
+    <div class="legend" style="margin-top:25px; padding:12px 18px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:10px; backdrop-filter:blur(6px); width:max-content;">
+    <p style="margin:4px 0; font-size:0.9rem;"><span style="color:#ff4d4d; font-weight:bold;">● Owner</span></p>
+    <p style="margin:4px 0; font-size:0.9rem;"><span style="color:#ffffff;">● Normaler Spieler</span></p>
+  </div>
+</section>
+
+<section id="mods">
+    <h2>Modpack</h2>
+    <p>Details zum Modpack werden im Laufe der Entwicklung veröffentlicht.</p>
+  </section>
+
+  <section id="rules">
+    <h2>Regeln</h2>
+    <p>Server-Regeln und Richtlinien folgen später.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt & Socials</h2>
+    <p>Hier findest du alle offiziellen MOD ATTACK 3 Kanäle:</p>
+
+    <div style="margin-top:20px; display:flex; flex-direction:column; gap:12px;">
+      <a href="https://discord.gg/NtVDFrHVAe" target="_blank" style="color:#3dff92; font-weight:bold; text-shadow:0 0 6px #2ecc71;">🔗 Discord Server</a>
+      <a href="https://www.youtube.com/@modattack_offizial" target="_blank" style="color:#3dff92; font-weight:bold; text-shadow:0 0 6px #2ecc71;">▶️ YouTube – Mod Attack</a>
+      <a href="https://www.youtube.com/@654_team" target="_blank" style="color:#3dff92; font-weight:bold; text-shadow:0 0 6px #2ecc71;">▶️ YouTube – Main Kanal</a>
+      <a href="https://github.com/modattack" target="_blank" style="color:#3dff92; font-weight:bold; text-shadow:0 0 6px #2ecc71;">🤖 GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MOD ATTACK 3</p>
+  </footer>
+<script>
+// Smooth Scroll
+document.querySelectorAll('nav a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+// Reveal Animations
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add('show'); }
+  });
+},{threshold:0.2});
+document.querySelectorAll('section').forEach(sec=>{
+  sec.classList.add('hidden');
+  observer.observe(sec);
+});
+// Button ripple
+document.querySelectorAll('a').forEach(btn=>{
+  btn.addEventListener('click',function(e){
+    const ripple=document.createElement('span');
+    ripple.classList.add('ripple');
+    ripple.style.left=e.clientX - btn.getBoundingClientRect().left + 'px';
+    ripple.style.top=e.clientY - btn.getBoundingClientRect().top + 'px';
+    btn.appendChild(ripple);
+    setTimeout(()=>ripple.remove(),600);
+  });
+});
+</script>
+<script>
+// Fullscreen particle canvas
+const c=document.getElementById('particles');
+const ctx=c.getContext('2d');
+function resize(){c.width=innerWidth;c.height=innerHeight;}resize();addEventListener('resize',resize);
+let particles=[];
+for(let i=0;i<120;i++){
+  particles.push({x:Math.random()*c.width,y:Math.random()*c.height, size:Math.random()*2+1, speedX:(Math.random()-0.5)*0.4, speedY:(Math.random()-0.5)*0.4});
+}
+function draw(){ctx.clearRect(0,0,c.width,c.height);
+  particles.forEach(p=>{
+    ctx.fillStyle='rgba(0,255,170,0.35)';
+    ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();
+    p.x+=p.speedX;p.y+=p.speedY;
+    if(p.x<0||p.x>c.width)p.speedX*=-1;
+    if(p.y<0||p.y>c.height)p.speedY*=-1;
+  });
+  requestAnimationFrame(draw);
+}draw();
+</script>
+<script>
+// === Countdown zum Projektstart ===
+const targetDate = new Date("2026-03-06T20:00:00").getTime();
+const countdownEl = document.getElementById("countdown");
+
+function updateCountdown() {
+  const now = Date.now();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    countdownEl.innerHTML = "🚀 Das Projekt hat gestartet!";
+    return;
+  }
+
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+
+  countdownEl.innerHTML = `Projektstart in <strong>${d}</strong>d <strong>${h}</strong>h <strong>${m}</strong>m <strong>${s}</strong>s`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+</body>
+</html>
